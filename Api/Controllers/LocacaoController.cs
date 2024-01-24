@@ -51,7 +51,13 @@ namespace Api.Controllers
         public async Task<ActionResult<Locacao>> PostLocacao([FromQuery] int filmesId, string email)
         {
             var usuario = await _context.Usuarios.FirstOrDefaultAsync(q => q.Email.ToUpper() == email.ToUpper());
+            
             if(usuario == null)
+                return BadRequest();
+
+            var locacaoUsuario = await _context.Locacoes.FirstOrDefaultAsync(u => u.Email == usuario.Email);
+            
+            if (locacaoUsuario != null)
                 return BadRequest();
 
             var filme = await _context.Filmes.FindAsync(filmesId);
