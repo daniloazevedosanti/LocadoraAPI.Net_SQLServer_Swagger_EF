@@ -34,10 +34,15 @@
     "auth": true,
     "usuario": {
         "id": 4,
-        "nome": "Joao das neves",
-        "email": "jonhjonh@admin.com",
+        "nome": "Nome do Usuario",
+        "email": "emailDoUsuario@email.com",
         "senha": ""
     },
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Impvbmhqb25oQGFkbWluLmNvbSIsIm5iZiI6MTcwNjEyMTIyMCwiZXhwIjoxNzA2MTI4NDIwLCJpYXQiOjE3MDYxMjEyMjB9.NjwFRidi0WG8hIMNBcG-14yb9ShSm3pjRN3Jnhj9kWY"
 }
 ```
+
+ Token ("token") é utilizado para conseguir fazer as solicitações onde necessite autorização.
+ 
+ Siga o pdf de exemplos para os demais endpoints.
+ 

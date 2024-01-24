@@ -44,5 +44,5 @@
 
  Token ("token") é utilizado para conseguir fazer as solicitações onde necessite autorização.
  
- Siga o pdf de exemplos para os demais endpoints.
+ Siga o pdf (instruções.pdf) e uma DataCollection para usar no postaman/insomnia de exemplos para os demais endpoints.
  
