@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "f3379a91-5dae-4a16-a514-d7477f7c6641",
+		"name": "DataCollection24012024",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastro Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Nome\" : \"Maria do Brasil\",\r\n    \"Email\" : \"mariabrasil@admin.com\",\r\n    \"Senha\": \"admin@12345\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44354/usuarios/cadastrar",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44354",
+					"path": [
+						"usuarios",
+						"cadastrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticacao",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Email\": \"mariabrasil@admin.com\",\r\n    \"Senha\": \"admin@12345\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44354/usuarios/usuario",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44354",
+					"path": [
+						"usuarios",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inserir/CadastrarFilmes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluQGFkbWluLmNvbSIsIm5iZiI6MTcwNjEwMDA5NiwiZXhwIjoxNzA2MTA3Mjk2LCJpYXQiOjE3MDYxMDAwOTZ9.h9SDNr3Da4QyW1DSCufCXB7r2EG02W-R9hgfBxuUyyQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\" : \"Godzilla 200\",\r\n    \"diretor\" : \"TakaoOkawara\",\r\n    \"estoque\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44354/filme",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44354",
+					"path": [
+						"filme"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FilmeById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Im1hcmlhYnJhc2lsQGFkbWluLmNvbSIsIm5iZiI6MTcwNjEyMzY3MCwiZXhwIjoxNzA2MTMwODcwLCJpYXQiOjE3MDYxMjM2NzB9.d86RlrcyVc6fWPgCTlfbqZW4QoFWyAKG_VLnNP4PKEk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44354/filme/8",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44354",
+					"path": [
+						"filme",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListaDeLocacoes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluQGFkbWluLmNvbSIsIm5iZiI6MTcwNjEwMDA5NiwiZXhwIjoxNzA2MTA3Mjk2LCJpYXQiOjE3MDYxMDAwOTZ9.h9SDNr3Da4QyW1DSCufCXB7r2EG02W-R9hgfBxuUyyQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44354/godzillas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44354",
+					"path": [
+						"godzillas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inserir/CadastrarFilmes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Impvbmhqb25oQGFkbWluLmNvbSIsIm5iZiI6MTcwNjExNzc5NCwiZXhwIjoxNzA2MTI0OTk0LCJpYXQiOjE3MDYxMTc3OTR9.w-e06yY7fNf3m_dHZeGo3DyaTtj7VJMni8-i03YzrmI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\" : \"Godzilla in Brazil\",\r\n    \"diretor\" : \"desconhecido\",\r\n    \"estoque\" : 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44354/filme",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44354",
+					"path": [
+						"filme"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BuscaPorParamentro(locadora/godzilla/{param})",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Impvbmhqb25oQGFkbWluLmNvbSIsIm5iZiI6MTcwNjExNzc5NCwiZXhwIjoxNzA2MTI0OTk0LCJpYXQiOjE3MDYxMTc3OTR9.w-e06yY7fNf3m_dHZeGo3DyaTtj7VJMni8-i03YzrmI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44354/locadora/godzilla/lla",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44354",
+					"path": [
+						"locadora",
+						"godzilla",
+						"lla"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Locacao",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InNvbmlhQGFkbWluLmNvbSIsIm5iZiI6MTcwNjEwMzY4NSwiZXhwIjoxNzA2MTEwODg1LCJpYXQiOjE3MDYxMDM2ODV9.9MOGnJ9AoAfwO61vbdvniRcDYm1GgNI-A4xehtMjcuc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\" : \"Son of Godzilla\",\r\n    \"diretor\" : \"Jun Fukuda\",\r\n    \"estoque\" : 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44354/godzilla?filmesId=1&email=sonia@admin.com",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44354",
+					"path": [
+						"godzilla"
+					],
+					"query": [
+						{
+							"key": "filmesId",
+							"value": "1"
+						},
+						{
+							"key": "email",
+							"value": "sonia@admin.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
